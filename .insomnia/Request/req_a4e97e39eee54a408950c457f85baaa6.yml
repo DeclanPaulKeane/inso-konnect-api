@@ -1,11 +1,11 @@
 _id: req_a4e97e39eee54a408950c457f85baaa6
 type: Request
 parentId: fld_bcc081a8c13a44419f6326e026b91cf8
-modified: 1663087183867
+modified: 1663093763740
 created: 1663087183867
 url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
   _.runtime_group_id }}/consumers/{% response 'body',
-  'req_11bfbb9b33bc43b2aa09077ecce0871b', 'b64::JC5pZA==::46b', 'never', 60
+  'req_aee932ce06744fc98ec6586c9b03bbaf', 'b64::JC5pZA==::46b', 'never', 60
   %}/key-auth"
 name: Provision Consumer a Credential
 description: ""

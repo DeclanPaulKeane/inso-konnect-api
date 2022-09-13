@@ -1,11 +1,28 @@
 _id: env_f83b6653aac6295b7015e1ad87ed43f5582eacff
 type: Environment
 parentId: wrk_d79ac0a1ef574852b51786e6686ce6ad
-modified: 1663086952389
+modified: 1663093892262
 created: 1663086952389
 name: Base Environment
-data: {}
-dataPropertyOrder: null
+data:
+  konnect_global_cp: https://global.api.konghq.com
+  personal_access_token: ""
+  runtime_group_id: ""
+  control_plane_id: ""
+  service_id: ""
+  route_id: ""
+  consumer_id: ""
+  plugin_id: ""
+dataPropertyOrder:
+  "&":
+    - konnect_global_cp
+    - personal_access_token
+    - runtime_group_id
+    - control_plane_id
+    - service_id
+    - route_id
+    - consumer_id
+    - plugin_id
 color: null
 isPrivate: false
 metaSortKey: 1663086952389

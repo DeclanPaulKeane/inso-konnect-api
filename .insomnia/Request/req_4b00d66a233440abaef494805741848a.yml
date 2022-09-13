@@ -1,11 +1,11 @@
-_id: req_00e7557e55f24df18a747b65c2688572
+_id: req_4b00d66a233440abaef494805741848a
 type: Request
-parentId: fld_0a3493e54ede4a8b94ccc82937c784ec
-modified: 1663095340670
-created: 1663087244074
+parentId: fld_4bb3f91d4ab44b29aceef22b27412007
+modified: 1663095343533
+created: 1663093512131
 url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
-  _.runtime_group_id }}/services/{{ _.service_id }}/plugins"
-name: Enable Key Auth Plugin on a Service
+  _.runtime_group_id }}/v1/plugins"
+name: Enable JWT Plugin Globally
 description: ""
 method: POST
 body:
@@ -13,16 +13,19 @@ body:
   text: |-
     {
     	"enabled": true,
-    	"name": "key-auth",
+    	"name": "jwt",
     	"config": {
-    		"hide_credentials": false,
-    		"key_in_body": false,
-    		"key_in_header": true,
-    		"key_in_query": true,
-    		"key_names": [
-    			"apikey"
+    		"cookie_names": [],
+    		"header_names": [
+    			"authorization"
     		],
-    		"run_on_preflight": true
+    		"key_claim_name": "iss",
+    		"maximum_expiration": 0,
+    		"run_on_preflight": true,
+    		"secret_is_base64": false,
+    		"uri_param_names": [
+    			"jwt"
+    		]
     	}
     }
 parameters: []
@@ -33,7 +36,7 @@ headers:
 authentication:
   token: "{{ _.personal_access_token }}"
   type: bearer
-metaSortKey: -1662506812411.5
+metaSortKey: -1662506812499
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

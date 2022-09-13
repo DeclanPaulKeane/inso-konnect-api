@@ -1,20 +1,20 @@
-_id: req_9e2e6d6719da470da847df3280c367c0
+_id: req_5234fc6547c4463a935cb4826e94aa1f
 type: Request
-parentId: fld_d00f9615ee71440b93d88fe92c33e9b0
-modified: 1663088541583
-created: 1663087297732
+parentId: fld_17d8ed439a13442ea104fdc4a356de4c
+modified: 1663094527617
+created: 1663094213208
 url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
-  _.runtime_group_id }}/services/"
-name: List Service
+  _.runtime_group_id }}/services/{{ _.service_id }}"
+name: List Plugins on a Service
 description: ""
 method: GET
 body: {}
 parameters: []
 headers: []
 authentication:
-  token: "{{ _.personal_access_token }}"
   type: bearer
-metaSortKey: -1662516518869
+  token: "{{ _.personal_access_token }}"
+metaSortKey: -1663089450944.625
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

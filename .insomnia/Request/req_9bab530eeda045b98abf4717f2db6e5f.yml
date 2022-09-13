@@ -1,21 +1,18 @@
-_id: req_e7312d2d1aec4bf495b7977d24fe17b9
+_id: req_9bab530eeda045b98abf4717f2db6e5f
 type: Request
-parentId: fld_3fd4acd3c9cf455cabc1e21165709290
-modified: 1663089089174
-created: 1663087183869
+parentId: fld_c671250a067c4176afd6f282ab594eee
+modified: 1663095439343
+created: 1663093471844
 url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
-  _.runtime_group_id }}/consumers"
-name: 2 - Create a consumer
+  _.runtime_group_id }}/consumers/{% response 'body',
+  'req_53092fdcc70b4afe8c902e70c5311afa', 'b64::JC5pZA==::46b', 'never', 60
+  %}/jwt"
+name: Provision Consumer a Credential
 description: ""
 method: POST
 body:
   mimeType: application/json
-  text: |-
-    {
-    	"username": "declan",
-    	"tags": [],
-    	"custom_id": "declanid"
-    }
+  text: '{"key":"foo","secret":"bar","algorithm":"HS256","consumer":{"id":"2c05abe5-1a36-43ba-85fc-9d033198567f"}}'
 parameters: []
 headers:
   - id: pair_d42dc07b1cba4a938cc8ed215574f759
@@ -24,7 +21,7 @@ headers:
 authentication:
   token: "{{ _.personal_access_token }}"
   type: bearer
-metaSortKey: -1662506812364.625
+metaSortKey: -1662506812405.25
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true
