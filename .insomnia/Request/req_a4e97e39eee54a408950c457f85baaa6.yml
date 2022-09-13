@@ -1,0 +1,34 @@
+_id: req_a4e97e39eee54a408950c457f85baaa6
+type: Request
+parentId: fld_bcc081a8c13a44419f6326e026b91cf8
+modified: 1663087183867
+created: 1663087183867
+url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
+  _.runtime_group_id }}/consumers/{% response 'body',
+  'req_11bfbb9b33bc43b2aa09077ecce0871b', 'b64::JC5pZA==::46b', 'never', 60
+  %}/key-auth"
+name: Provision Consumer a Credential
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"key": "declankey"
+    }
+parameters: []
+headers:
+  - id: pair_d42dc07b1cba4a938cc8ed215574f759
+    name: Content-Type
+    value: application/json
+authentication:
+  token: "{{ _.personal_access_token }}"
+  type: bearer
+metaSortKey: -1662506812405.25
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

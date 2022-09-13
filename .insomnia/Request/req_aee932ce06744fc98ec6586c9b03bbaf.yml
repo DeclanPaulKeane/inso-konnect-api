@@ -1,0 +1,34 @@
+_id: req_aee932ce06744fc98ec6586c9b03bbaf
+type: Request
+parentId: fld_bcc081a8c13a44419f6326e026b91cf8
+modified: 1663087183865
+created: 1663087183865
+url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
+  _.runtime_group_id }}/consumers"
+name: Create a consumer
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"username": "declan",
+    	"tags": [],
+    	"custom_id": "declanid"
+    }
+parameters: []
+headers:
+  - id: pair_d42dc07b1cba4a938cc8ed215574f759
+    name: Content-Type
+    value: application/json
+authentication:
+  token: "{{ _.personal_access_token }}"
+  type: bearer
+metaSortKey: -1662506812455.25
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

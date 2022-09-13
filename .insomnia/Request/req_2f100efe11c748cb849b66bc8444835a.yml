@@ -1,0 +1,36 @@
+_id: req_2f100efe11c748cb849b66bc8444835a
+type: Request
+parentId: fld_180b9a1b07b444d485140b85a601b584
+modified: 1663087151334
+created: 1663087151334
+url: "{{ _.konnect_global_cp }}/konnect-api/api/service_packages"
+name: Create a Service Package
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"display_name": "First-Service",
+    	"name": "First-Service",
+    	"description": "Our First Service",
+    	"metadata": {
+    		"labels": {}
+    	}
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_de8b2a1a0e234f71ad9f461725662bbd
+authentication:
+  token: "{{ _.personal_access_token }}"
+  type: bearer
+metaSortKey: -1662515540376.7969
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

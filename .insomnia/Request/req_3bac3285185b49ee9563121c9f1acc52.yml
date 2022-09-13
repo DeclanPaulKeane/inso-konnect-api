@@ -1,0 +1,23 @@
+_id: req_3bac3285185b49ee9563121c9f1acc52
+type: Request
+parentId: fld_2cae654997c34b63a9bf4089a445ca9d
+modified: 1663087135118
+created: 1663087135118
+url: "{{ _.konnect_global_cp }}/kauth/api/v1/personal-access-tokens"
+name: List Personal Access Tokens
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  token: "{{ _.personal_access_token }}"
+  type: bearer
+metaSortKey: -1662515540385
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

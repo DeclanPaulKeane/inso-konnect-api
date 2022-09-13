@@ -1,0 +1,38 @@
+_id: req_7ed43fa9d2b643ee9835ec5e25e12a8b
+type: Request
+parentId: fld_9d2b40eae5d648218d404de4241a0abb
+modified: 1663087226507
+created: 1663087226507
+url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
+  _.runtime_group_id }}/snis"
+name: 3 - Update SNI
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"name": "example-sni",
+    	"certificate": {
+    		"id": "abb83bf9-858c-4026-9774-9b00fe541ec2"
+    	},
+    	"tags": [
+    		"foo"
+    	]
+    }
+parameters: []
+headers:
+  - id: pair_d42dc07b1cba4a938cc8ed215574f759
+    name: Content-Type
+    value: application/json
+authentication:
+  token: "{{ _.personal_access_token }}"
+  type: bearer
+metaSortKey: -1662506812361.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

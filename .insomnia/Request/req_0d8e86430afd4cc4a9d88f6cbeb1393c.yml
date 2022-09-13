@@ -1,0 +1,23 @@
+_id: req_0d8e86430afd4cc4a9d88f6cbeb1393c
+type: Request
+parentId: fld_78fa6211363e455fa45e4889e9748964
+modified: 1663087135126
+created: 1663087135126
+url: "{{ _.konnect_global_cp }}/kauth/api/v1/users"
+name: List Organizational Users
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  token: "{{ _.personal_access_token }}"
+  type: bearer
+metaSortKey: -1662515540377.1387
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

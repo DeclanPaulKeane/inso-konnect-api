@@ -1,0 +1,23 @@
+_id: req_6741686ebba5456aa304582e293296e4
+type: Request
+parentId: fld_180b9a1b07b444d485140b85a601b584
+modified: 1663087151335
+created: 1663087151335
+url: "{{ _.konnect_global_cp }}/konnect-api/api/service_packages"
+name: List Service Package
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  token: "{{ _.personal_access_token }}"
+  type: bearer
+metaSortKey: -1662515540426.7969
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,25 @@
+_id: req_e7c8aae17a3f41cdb5034e642c086a7a
+type: Request
+parentId: fld_9d2b40eae5d648218d404de4241a0abb
+modified: 1663087226508
+created: 1663087226508
+url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
+  _.runtime_group_id }}/snis/{% response 'body',
+  'req_245db091ed7e4d9a8cef2c6693b796ac', 'b64::JC5pZA==::46b', 'never', 60 %}"
+name: 4 - Delete SNI
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  token: "{{ _.personal_access_token }}"
+  type: bearer
+metaSortKey: -1662506812355.25
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

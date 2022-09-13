@@ -1,0 +1,24 @@
+_id: req_82d21e54ec0b4dc4bfe0bc5638907c2d
+type: Request
+parentId: fld_9d2b40eae5d648218d404de4241a0abb
+modified: 1663087226505
+created: 1663087226505
+url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
+  _.runtime_group_id }}/snis/"
+name: 1 - Get SNI's
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  token: "{{ _.personal_access_token }}"
+  type: bearer
+metaSortKey: -1662506812449
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

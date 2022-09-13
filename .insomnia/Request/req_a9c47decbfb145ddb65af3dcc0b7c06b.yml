@@ -1,0 +1,34 @@
+_id: req_a9c47decbfb145ddb65af3dcc0b7c06b
+type: Request
+parentId: fld_34f23d28f48248fab79accd42d6d59d3
+modified: 1663087217901
+created: 1663087217901
+url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
+  _.runtime_group_id }}/ca_certificates/{% response 'body',
+  'req_af2b291931724f3ba39baf31c83f080f', 'b64::JC5pZA==::46b', 'never', 60 %}"
+name: 3 - Update a CA Certificate
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: >-
+    {
+    	"cert": "-----BEGIN CERTIFICATE-----\nMIIDyTCCArGgAwIBAgIBADANBgkqhkiG9w0BAQUFADB/MQswCQYDVQQGEwJGUjET\nMBEGA1UECAwKU29tZS1TdGF0ZTEOMAwGA1UEBwwFUGFyaXMxDTALBgNVBAoMBERp\nbWkxDTALBgNVBAsMBE5TQlUxEDAOBgNVBAMMB0RpbWkgQ0ExGzAZBgkqhkiG9w0B\nCQEWDGRpbWlAZGltaS5mcjAeFw0xNDAxMjgyMDI2NDRaFw0yNDAxMjYyMDI2NDRa\nMH8xCzAJBgNVBAYTAkZSMRMwEQYDVQQIDApTb21lLVN0YXRlMQ4wDAYDVQQHDAVQ\nYXJpczENMAsGA1UECgwERGltaTENMAsGA1UECwwETlNCVTEQMA4GA1UEAwwHRGlt\naSBDQTEbMBkGCSqGSIb3DQEJARYMZGltaUBkaW1pLmZyMIIBIjANBgkqhkiG9w0B\nAQEFAAOCAQ8AMIIBCgKCAQEAuxuG4QeBIGXj/AB/YRLLtpgpTpGnDntVlgsycZrL\n3qqyOdBNlwnvcB9etfY5iWzjeq7YZRr6i0dIV4sFNBR2NoK+YvdD9j1TRi7njZg0\nd6zth0xlsOhCsDlV/YCL1CTcYDlKA/QiKeIQa7GU3Rhf0t/KnAkr6mwoDbdKBQX1\nD5HgQuXJiFdh5XRebxF1ZB3gH+0kCEaEZPrjFDApkOXNxEARZdpBLpbvQljtVXtj\nHMsvrIOc7QqUSOU3GcbBMSHjT8cgg8ssf492Go3bDQkIzTROz9QgDHaqDqTC9Hoe\nvlIpTS+q/3BCY5AGWKl3CCR6dDyK6honnOR/8srezaN4PwIDAQABo1AwTjAdBgNV\nHQ4EFgQUhMwqkbBrGp87HxfvwgPnlGgVR64wHwYDVR0jBBgwFoAUhMwqkbBrGp87\nHxfvwgPnlGgVR64wDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQUFAAOCAQEAVqYq\nvhm5wAEKmvrKXRjeb5kiEIp7oZAFkYp6sKODuZ1VdkjMDD4wv46iqAe1QIIsfGwd\nDmv0oqSl+iPPy24ATMSZQbPLO5K64Hw7Q8KPos0yD8gHSg2d4SOukj+FD2IjAH17\na8auMw7TTHu6976JprQQKtPADRcfodGd5UFiz/6ZgLzUE23cktJMc2Bt18B9OZII\nJ9ef2PZxZirJg1OqF2KssDlJP5ECo9K3EmovC5M5Aly++s8ayjBnNivtklYL1VOT\nZrpPgcndTHUA5KS/Duf40dXm0snCxLAKNP28pMowDLSYc6IjVrD4+qqw3f1b7yGb\nbJcFgxKDeg5YecQOSg==\n-----END CERTIFICATE-----",
+    	"tags": ["foo"]
+    }
+parameters: []
+headers:
+  - id: pair_d42dc07b1cba4a938cc8ed215574f759
+    name: Content-Type
+    value: application/json
+authentication:
+  token: "{{ _.personal_access_token }}"
+  type: bearer
+metaSortKey: -1662506812367.75
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

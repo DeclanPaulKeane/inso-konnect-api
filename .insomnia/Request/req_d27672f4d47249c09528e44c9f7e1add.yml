@@ -1,0 +1,23 @@
+_id: req_d27672f4d47249c09528e44c9f7e1add
+type: Request
+parentId: fld_78fa6211363e455fa45e4889e9748964
+modified: 1663087135125
+created: 1663087135125
+url: "{{ _.konnect_global_cp }}/kbilling/v1/usage"
+name: List Billing Usage
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  token: "{{ _.personal_access_token }}"
+  type: bearer
+metaSortKey: -1662515540375.8203
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

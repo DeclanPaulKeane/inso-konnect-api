@@ -1,0 +1,25 @@
+_id: req_21efad1e77c24ceba934e05f7cec7be9
+type: Request
+parentId: fld_ebaf376bb83c46848a3d46fa330b0f57
+modified: 1663087193281
+created: 1663087193281
+url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
+  _.runtime_group_id }}/certificates/{% response 'body',
+  'req_2cd1b822c2224c5ba4aa5d0ad2233316', 'b64::JC5pZA==::46b', 'never', 60 %}"
+name: 4 - Delete a Certificate
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  token: "{{ _.personal_access_token }}"
+  type: bearer
+metaSortKey: -1662506812355.25
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

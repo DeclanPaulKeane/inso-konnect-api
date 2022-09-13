@@ -1,0 +1,23 @@
+_id: req_fc25101380b144748a1362fb9d1a659a
+type: Request
+parentId: fld_78fa6211363e455fa45e4889e9748964
+modified: 1663087135125
+created: 1663087135125
+url: "{{ _.konnect_global_cp }}/kauth/api/v1/organizations/me/entitlements"
+name: List Organizational Entitlements
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  token: "{{ _.personal_access_token }}"
+  type: bearer
+metaSortKey: -1662515540376.0156
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

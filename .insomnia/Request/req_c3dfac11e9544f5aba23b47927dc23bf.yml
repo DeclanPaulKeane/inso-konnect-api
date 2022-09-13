@@ -1,0 +1,55 @@
+_id: req_c3dfac11e9544f5aba23b47927dc23bf
+type: Request
+parentId: fld_87a7da58cf30493c8d82b21b98df92ec
+modified: 1663087244079
+created: 1663087244079
+url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
+  _.runtime_group_id }}/services/{{ _.service_id }}/plugins"
+name: Enable Rate Limit Adv Plugin on a Service
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"enabled": true,
+    	"name": "rate-limiting-advanced",
+    	"config": {
+    		"dictionary_name": "kong_rate_limiting_counters",
+    		"enforce_consumer_groups": false,
+    		"hide_client_headers": false,
+    		"identifier": "ip",
+    		"limit": [
+    			10
+    		],
+    		"redis": {
+    			"database": 0,
+    			"keepalive_pool_size": 30,
+    			"ssl": false,
+    			"ssl_verify": false,
+    			"timeout": 2000
+    		},
+    		"retry_after_jitter_max": 0,
+    		"strategy": "local",
+    		"window_size": [
+    			60
+    		],
+    		"window_type": "fixed"
+    	}
+    }
+parameters: []
+headers:
+  - id: pair_6cb39f823b894f41952d5aada4e38d1b
+    name: Content-Type
+    value: application/json
+authentication:
+  token: "{{ _.personal_access_token }}"
+  type: bearer
+metaSortKey: -1662506812411.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

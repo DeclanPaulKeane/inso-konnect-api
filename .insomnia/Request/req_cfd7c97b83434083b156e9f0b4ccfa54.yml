@@ -1,0 +1,24 @@
+_id: req_cfd7c97b83434083b156e9f0b4ccfa54
+type: Request
+parentId: fld_34f23d28f48248fab79accd42d6d59d3
+modified: 1663087217898
+created: 1663087217898
+url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
+  _.runtime_group_id }}/ca_certificates/"
+name: 1 - Get CA Certificates
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  token: "{{ _.personal_access_token }}"
+  type: bearer
+metaSortKey: -1662506812449
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,53 @@
+_id: req_830d7258081c423fb9539119550fb95c
+type: Request
+parentId: fld_d00f9615ee71440b93d88fe92c33e9b0
+modified: 1663087297737
+created: 1663087297737
+url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
+  _.runtime_group_id }}/routes/{% response 'body',
+  'req_01d4b246ea244cbd9852fe1644a0227a', 'b64::JC5pZA==::46b', 'never', 60 %}"
+name: Update a Route
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"name": "httpbin",
+    	"protocols": [
+    		"http"
+    	],
+    	"snis": null,
+    	"hosts": null,
+    	"sources": null,
+    	"destinations": null,
+    	"methods": null,
+    	"paths": [
+    		"/testing"
+    	],
+    	"headers": null,
+    	"https_redirect_status_code": 426,
+    	"tags": [
+    		"foo"
+    	],
+    	"regex_priority": 0,
+    	"path_handling": "v0",
+    	"strip_path": true,
+    	"preserve_host": false
+    }
+parameters: []
+headers:
+  - id: pair_29bad2e04e4147e3bbd2f53a968c1fbd
+    name: Content-Type
+    value: application/json
+authentication:
+  token: "{{ _.personal_access_token }}"
+  type: bearer
+metaSortKey: -1662515662545.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

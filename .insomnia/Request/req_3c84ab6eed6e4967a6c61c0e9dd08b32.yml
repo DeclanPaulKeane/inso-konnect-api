@@ -1,0 +1,25 @@
+_id: req_3c84ab6eed6e4967a6c61c0e9dd08b32
+type: Request
+parentId: fld_34f23d28f48248fab79accd42d6d59d3
+modified: 1663087217900
+created: 1663087217900
+url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
+  _.runtime_group_id }}/ca_certificates/{% response 'body',
+  'req_af2b291931724f3ba39baf31c83f080f', 'b64::JC5pZA==::46b', 'never', 60 %}"
+name: 4 - Delete a CA Certificate
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  token: "{{ _.personal_access_token }}"
+  type: bearer
+metaSortKey: -1662506812355.25
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

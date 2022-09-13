@@ -1,0 +1,33 @@
+_id: req_255e4d76355b4e528ac5efcdf95d9516
+type: Request
+parentId: fld_180b9a1b07b444d485140b85a601b584
+modified: 1663087151336
+created: 1663087151336
+url: "{{ _.konnect_global_cp }}/konnect-api/api/service_versions"
+name: Create a Service Package Version
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: >-
+    {
+    	"version": "v1",
+    	"service_package": "{% response 'body', 'req_f73af63384e842e6b29f4051ece59da2', 'b64::JC5pZA==::46b', 'never', 60 %}",
+    	"control_plane":"{{ _.runtime_group_id }}"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_de8b2a1a0e234f71ad9f461725662bbd
+authentication:
+  token: "{{ _.personal_access_token }}"
+  type: bearer
+metaSortKey: -1662515540376.6016
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

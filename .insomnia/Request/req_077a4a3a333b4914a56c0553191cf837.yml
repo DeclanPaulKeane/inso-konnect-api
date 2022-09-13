@@ -1,0 +1,25 @@
+_id: req_077a4a3a333b4914a56c0553191cf837
+type: Request
+parentId: fld_d00f9615ee71440b93d88fe92c33e9b0
+modified: 1663087297734
+created: 1663087297734
+url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
+  _.runtime_group_id }}/services/{% response 'body',
+  'req_6d5c35876b7a46c6be98bb4f78333936', 'b64::JC5pZA==::46b', 'never', 60 %}"
+name: Delete a Service
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  token: "{{ _.personal_access_token }}"
+  type: bearer
+metaSortKey: -1662515662695.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

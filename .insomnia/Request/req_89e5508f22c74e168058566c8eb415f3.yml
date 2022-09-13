@@ -1,0 +1,24 @@
+_id: req_89e5508f22c74e168058566c8eb415f3
+type: Request
+parentId: fld_a5ba8dd33c3147d2a551b7fb19697e85
+modified: 1663087233760
+created: 1663087233760
+url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
+  _.runtime_group_id }}/upstreams/"
+name: 1 - Get Upstreams
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  token: "{{ _.personal_access_token }}"
+  type: bearer
+metaSortKey: -1662515523560.625
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

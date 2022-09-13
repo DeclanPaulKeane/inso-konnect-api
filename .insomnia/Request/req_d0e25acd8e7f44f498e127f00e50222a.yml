@@ -1,0 +1,36 @@
+_id: req_d0e25acd8e7f44f498e127f00e50222a
+type: Request
+parentId: fld_9d2b40eae5d648218d404de4241a0abb
+modified: 1663087226506
+created: 1663087226506
+url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
+  _.runtime_group_id }}/snis"
+name: 2 - Create SNI
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"name": "example-sni",
+    	"certificate": {
+    		"id": "abb83bf9-858c-4026-9774-9b00fe541ec2"
+    	},
+    	"tags": []
+    }
+parameters: []
+headers:
+  - id: pair_d42dc07b1cba4a938cc8ed215574f759
+    name: Content-Type
+    value: application/json
+authentication:
+  token: "{{ _.personal_access_token }}"
+  type: bearer
+metaSortKey: -1662506812374
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

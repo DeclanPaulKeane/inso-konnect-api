@@ -1,0 +1,23 @@
+_id: req_564376aa6464403e831f711f334af224
+type: Request
+parentId: fld_78fa6211363e455fa45e4889e9748964
+modified: 1663087135124
+created: 1663087135124
+url: "{{ _.konnect_global_cp }}/kauth/api/v1/organizations/me"
+name: List Organizational Owner
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  token: "{{ _.personal_access_token }}"
+  type: bearer
+metaSortKey: -1662515540377.0898
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

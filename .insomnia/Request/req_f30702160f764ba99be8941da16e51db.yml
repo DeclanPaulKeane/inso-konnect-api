@@ -1,0 +1,23 @@
+_id: req_f30702160f764ba99be8941da16e51db
+type: Request
+parentId: fld_e7ac9301109b42ceafe5e62479685b6f
+modified: 1663087172800
+created: 1663087172800
+url: ""
+name: Return vitals information**
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  token: "{{ _.personal_access_token }}"
+  type: bearer
+metaSortKey: -1662515540405.8984
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

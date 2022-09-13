@@ -1,0 +1,32 @@
+_id: req_589dbb828edd486bbcd9bde848fae304
+type: Request
+parentId: fld_2cae654997c34b63a9bf4089a445ca9d
+modified: 1663087135116
+created: 1663087135116
+url: "{{ _.konnect_global_cp }}/kauth/api/v1/personal-access-tokens"
+name: Create a Personal Access Token
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"name": "first-token",
+    	"expires_at": "2022-10-07T01:50:55.073Z"
+    }
+parameters: []
+headers:
+  - id: pair_d76458423db04e9ba085a4d8e70e3f06
+    name: Content-Type
+    value: application/json
+authentication:
+  token: "{{ _.personal_access_token }}"
+  type: bearer
+metaSortKey: -1662515540372.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

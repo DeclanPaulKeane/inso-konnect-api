@@ -1,0 +1,24 @@
+_id: req_bc5efa0a795447cfaa5153ebd194d139
+type: Request
+parentId: fld_1cfadbb1af5a4ffe8c352a7ea42a7231
+modified: 1663087135121
+created: 1663087135121
+url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
+  _.runtime_group_id }}/runtime-instances"
+name: List Runtime Instances
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  token: "{{ _.personal_access_token }}"
+  type: bearer
+metaSortKey: -1662515540375.625
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
