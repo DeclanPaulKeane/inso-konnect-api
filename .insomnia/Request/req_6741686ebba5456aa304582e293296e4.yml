@@ -1,7 +1,7 @@
 _id: req_6741686ebba5456aa304582e293296e4
 type: Request
 parentId: fld_180b9a1b07b444d485140b85a601b584
-modified: 1663087151335
+modified: 1663095755189
 created: 1663087151335
 url: "{{ _.konnect_global_cp }}/konnect-api/api/service_packages"
 name: List Service Package

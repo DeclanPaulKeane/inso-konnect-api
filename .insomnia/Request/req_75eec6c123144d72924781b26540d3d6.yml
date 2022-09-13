@@ -1,11 +1,11 @@
-_id: req_2c77bab9df594401a5606fa4622705d9
+_id: req_75eec6c123144d72924781b26540d3d6
 type: Request
-parentId: fld_4bb3f91d4ab44b29aceef22b27412007
-modified: 1663095585717
-created: 1663093512132
+parentId: fld_594f55281db442ee85ff3b50f860311f
+modified: 1663095847954
+created: 1663095561119
 url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
-  _.runtime_group_id }}/routes/{{ _.route_id }}/plugins"
-name: Enable Key Auth Plugin on a Route
+  _.runtime_group_id }}/services/{{ _.service_id }}/plugins"
+name: Enable IP Restriction Plugin on a Service
 description: ""
 method: POST
 body:
@@ -13,18 +13,10 @@ body:
   text: |-
     {
     	"enabled": true,
-    	"name": "jwt",
+    	"name": "ip-restriction",
     	"config": {
-    		"cookie_names": [],
-    		"header_names": [
-    			"authorization"
-    		],
-    		"key_claim_name": "iss",
-    		"maximum_expiration": 0,
-    		"run_on_preflight": true,
-    		"secret_is_base64": false,
-    		"uri_param_names": [
-    			"jwt"
+    		"allow": [
+    			"10.0.0.1"
     		]
     	}
     }
@@ -36,7 +28,7 @@ headers:
 authentication:
   token: "{{ _.personal_access_token }}"
   type: bearer
-metaSortKey: -1662506812408.375
+metaSortKey: -1662506812411.5
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true
