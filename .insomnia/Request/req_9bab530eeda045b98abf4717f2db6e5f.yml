@@ -1,7 +1,7 @@
 _id: req_9bab530eeda045b98abf4717f2db6e5f
 type: Request
 parentId: fld_c671250a067c4176afd6f282ab594eee
-modified: 1663095439343
+modified: 1664301164055
 created: 1663093471844
 url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
   _.runtime_group_id }}/consumers/{% response 'body',
@@ -12,7 +12,15 @@ description: ""
 method: POST
 body:
   mimeType: application/json
-  text: '{"key":"foo","secret":"bar","algorithm":"HS256","consumer":{"id":"2c05abe5-1a36-43ba-85fc-9d033198567f"}}'
+  text: |-
+    {
+    	"key": "foo",
+    	"secret": "bar",
+    	"algorithm": "HS256",
+    	"consumer": {
+    		"id": "2c05abe5-1a36-43ba-85fc-9d033198567f"
+    	}
+    }
 parameters: []
 headers:
   - id: pair_d42dc07b1cba4a938cc8ed215574f759

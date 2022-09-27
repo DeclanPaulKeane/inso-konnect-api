@@ -1,11 +1,11 @@
 _id: req_21e35f7ba94c47db8d689996aac0eecc
 type: Request
 parentId: fld_a8c8ecac5a684bbe9b88eeb0ec19c753
-modified: 1664224518656
+modified: 1664301145491
 created: 1664206709355
 url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
   _.runtime_group_id }}/consumers/{{ _.consumer_id }}/acls"
-name: Apply ACL on consumer
+name: Attach consumer to ACL
 description: ""
 method: POST
 body:
