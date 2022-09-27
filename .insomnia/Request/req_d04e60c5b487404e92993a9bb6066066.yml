@@ -1,11 +1,11 @@
-_id: req_b0303d42c5ca4de998937e868eefc9b2
+_id: req_d04e60c5b487404e92993a9bb6066066
 type: Request
-parentId: fld_4bb3f91d4ab44b29aceef22b27412007
-modified: 1663300875663
-created: 1663093512130
+parentId: fld_d60c0e2305f44b6e8ecc6d82fb775dca
+modified: 1663718680510
+created: 1663710403348
 url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
   _.runtime_group_id }}/services/{{ _.service_id }}/plugins"
-name: Enable Key Auth Plugin on a Service
+name: Enable Prom  Plugin on a Service
 description: ""
 method: POST
 body:
@@ -13,19 +13,13 @@ body:
   text: |-
     {
     	"enabled": true,
-    	"name": "jwt",
+    	"name": "prometheus",
     	"config": {
-    		"cookie_names": [],
-    		"header_names": [
-    			"authorization"
-    		],
-    		"key_claim_name": "iss",
-    		"maximum_expiration": 0,
-    		"run_on_preflight": true,
-    		"secret_is_base64": false,
-    		"uri_param_names": [
-    			"jwt"
-    		]
+    		"bandwidth_metrics": false,
+    		"latency_metrics": false,
+    		"per_consumer": false,
+    		"status_code_metrics": false,
+    		"upstream_health_metrics": false
     	}
     }
 parameters: []

@@ -1,7 +1,7 @@
 _id: req_aee932ce06744fc98ec6586c9b03bbaf
 type: Request
 parentId: fld_bcc081a8c13a44419f6326e026b91cf8
-modified: 1663089241126
+modified: 1664205952277
 created: 1663087183865
 url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
   _.runtime_group_id }}/consumers"
@@ -12,9 +12,9 @@ body:
   mimeType: application/json
   text: |-
     {
-    	"username": "declan",
+    	"username": "paul",
     	"tags": [],
-    	"custom_id": "declanid"
+    	"custom_id": "paul"
     }
 parameters: []
 headers:

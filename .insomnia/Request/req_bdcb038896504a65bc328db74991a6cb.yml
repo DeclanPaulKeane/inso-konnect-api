@@ -1,0 +1,166 @@
+_id: req_bdcb038896504a65bc328db74991a6cb
+type: Request
+parentId: fld_9d7cb86686094f959ed677bace4610f1
+modified: 1663300882817
+created: 1663299734232
+url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
+  _.runtime_group_id }}/routes/{{ _.route_id }}/plugins"
+name: Enable StatdsD Plugin on a Route
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"enabled": true,
+    	"name": "statsd-advanced",
+    	"config": {
+    		"consumer_identifier_default": "custom_id",
+    		"host": "localhost",
+    		"hostname_in_prefix": false,
+    		"metrics": [
+    			{
+    				"name": "request_count",
+    				"sample_rate": 1,
+    				"stat_type": "counter",
+    				"consumer_identifier": null,
+    				"service_identifier": null,
+    				"workspace_identifier": null
+    			},
+    			{
+    				"name": "latency",
+    				"stat_type": "timer",
+    				"sample_rate": null,
+    				"consumer_identifier": null,
+    				"service_identifier": null,
+    				"workspace_identifier": null
+    			},
+    			{
+    				"name": "request_size",
+    				"stat_type": "timer",
+    				"sample_rate": null,
+    				"consumer_identifier": null,
+    				"service_identifier": null,
+    				"workspace_identifier": null
+    			},
+    			{
+    				"name": "status_count",
+    				"sample_rate": 1,
+    				"stat_type": "counter",
+    				"consumer_identifier": null,
+    				"service_identifier": null,
+    				"workspace_identifier": null
+    			},
+    			{
+    				"name": "response_size",
+    				"stat_type": "timer",
+    				"sample_rate": null,
+    				"consumer_identifier": null,
+    				"service_identifier": null,
+    				"workspace_identifier": null
+    			},
+    			{
+    				"name": "unique_users",
+    				"stat_type": "set",
+    				"sample_rate": null,
+    				"consumer_identifier": null,
+    				"service_identifier": null,
+    				"workspace_identifier": null
+    			},
+    			{
+    				"name": "request_per_user",
+    				"sample_rate": 1,
+    				"stat_type": "counter",
+    				"consumer_identifier": null,
+    				"service_identifier": null,
+    				"workspace_identifier": null
+    			},
+    			{
+    				"name": "upstream_latency",
+    				"stat_type": "timer",
+    				"sample_rate": null,
+    				"consumer_identifier": null,
+    				"service_identifier": null,
+    				"workspace_identifier": null
+    			},
+    			{
+    				"name": "kong_latency",
+    				"stat_type": "timer",
+    				"sample_rate": null,
+    				"consumer_identifier": null,
+    				"service_identifier": null,
+    				"workspace_identifier": null
+    			},
+    			{
+    				"name": "status_count_per_user",
+    				"sample_rate": 1,
+    				"stat_type": "counter",
+    				"consumer_identifier": null,
+    				"service_identifier": null,
+    				"workspace_identifier": null
+    			},
+    			{
+    				"name": "status_count_per_workspace",
+    				"sample_rate": 1,
+    				"stat_type": "counter",
+    				"consumer_identifier": null,
+    				"service_identifier": null,
+    				"workspace_identifier": null
+    			},
+    			{
+    				"name": "status_count_per_user_per_route",
+    				"sample_rate": 1,
+    				"stat_type": "counter",
+    				"consumer_identifier": null,
+    				"service_identifier": null,
+    				"workspace_identifier": null
+    			},
+    			{
+    				"name": "shdict_usage",
+    				"sample_rate": 1,
+    				"stat_type": "gauge",
+    				"consumer_identifier": null,
+    				"service_identifier": null,
+    				"workspace_identifier": null
+    			},
+    			{
+    				"name": "cache_datastore_hits_total",
+    				"sample_rate": 1,
+    				"stat_type": "counter",
+    				"consumer_identifier": null,
+    				"service_identifier": null,
+    				"workspace_identifier": null
+    			},
+    			{
+    				"name": "cache_datastore_misses_total",
+    				"sample_rate": 1,
+    				"stat_type": "counter",
+    				"consumer_identifier": null,
+    				"service_identifier": null,
+    				"workspace_identifier": null
+    			}
+    		],
+    		"port": 8125,
+    		"prefix": "kong",
+    		"service_identifier_default": "service_name_or_host",
+    		"udp_packet_size": 0,
+    		"use_tcp": false,
+    		"workspace_identifier_default": "workspace_id"
+    	}
+    }
+parameters: []
+headers:
+  - id: pair_6cb39f823b894f41952d5aada4e38d1b
+    name: Content-Type
+    value: application/json
+authentication:
+  token: "{{ _.personal_access_token }}"
+  type: bearer
+metaSortKey: -1662506812408.375
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

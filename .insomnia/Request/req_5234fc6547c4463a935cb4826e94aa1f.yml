@@ -1,7 +1,7 @@
 _id: req_5234fc6547c4463a935cb4826e94aa1f
 type: Request
 parentId: fld_17d8ed439a13442ea104fdc4a356de4c
-modified: 1663094527617
+modified: 1663299216975
 created: 1663094213208
 url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
   _.runtime_group_id }}/services/{{ _.service_id }}"

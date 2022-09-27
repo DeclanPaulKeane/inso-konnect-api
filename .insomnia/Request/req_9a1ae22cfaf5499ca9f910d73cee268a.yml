@@ -1,8 +1,8 @@
-_id: req_c4af8caab02749f8a95ad9f02ef96dbd
+_id: req_9a1ae22cfaf5499ca9f910d73cee268a
 type: Request
-parentId: fld_87a7da58cf30493c8d82b21b98df92ec
-modified: 1664298617084
-created: 1663087244079
+parentId: fld_94cb160497a04fe199220a79ad86b95d
+modified: 1663876885810
+created: 1663865042805
 url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
   _.runtime_group_id }}/v1/plugins"
 name: Enable Rate Limit Adv Plugin Globally
@@ -16,21 +16,23 @@ body:
     	"name": "rate-limiting-advanced",
     	"config": {
     		"dictionary_name": "kong_rate_limiting_counters",
-    		"enforce_consumer_groups": false,
-    		"hide_client_headers": false,
-    		"identifier": "ip",
+    		"identifier": "consumer",
     		"limit": [
-    			10
+    			60
     		],
     		"redis": {
     			"database": 0,
+    			"host": "192.158.1.38",
     			"keepalive_pool_size": 30,
+    			"password": "secret-password",
+    			"port": 6379,
     			"ssl": false,
     			"ssl_verify": false,
-    			"timeout": 2000
+    			"timeout": 2000,
+    			"username": "kong"
     		},
-    		"retry_after_jitter_max": 0,
-    		"strategy": "local",
+    		"strategy": "redis",
+    		"sync_rate": 5,
     		"window_size": [
     			60
     		],

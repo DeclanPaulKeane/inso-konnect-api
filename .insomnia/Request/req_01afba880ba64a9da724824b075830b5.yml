@@ -1,7 +1,7 @@
 _id: req_01afba880ba64a9da724824b075830b5
 type: Request
 parentId: fld_d00f9615ee71440b93d88fe92c33e9b0
-modified: 1663087297735
+modified: 1663721028236
 created: 1663087297735
 url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
   _.runtime_group_id }}/routes"
@@ -10,12 +10,9 @@ description: ""
 method: POST
 body:
   mimeType: application/json
-  text: >-
+  text: |-
     {
-    	"service": {
-    		"id": "{% response 'body', 'req_6d5c35876b7a46c6be98bb4f78333936', 'b64::JC5pZA==::46b', 'never', 60 %}"
-    	},
-    	"name": "httpbin",
+      "name": "httpbin",
     	"protocols": [
     		"http"
     	],

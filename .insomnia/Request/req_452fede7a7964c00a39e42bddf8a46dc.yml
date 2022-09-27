@@ -1,23 +1,27 @@
-_id: req_b390b5d6e4e6427d94309b67933c8897
+_id: req_452fede7a7964c00a39e42bddf8a46dc
 type: Request
-parentId: fld_594f55281db442ee85ff3b50f860311f
-modified: 1663720829784
-created: 1663095561122
+parentId: fld_cf68ec6aa89f437bade75536a5d98042
+modified: 1664205854167
+created: 1663620501931
 url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
   _.runtime_group_id }}/routes/{{ _.route_id }}/plugins"
-name: Enable IP Restriction Plugin on a Route
+name: Enable Pre Function Plugin on a Route
 description: ""
 method: POST
 body:
   mimeType: application/json
-  text: |-
+  text: >-
     {
     	"enabled": true,
-    	"name": "ip-restriction",
+    	"name": "pre-function",
     	"config": {
-    		"deny": [
-    			"10.0.0.1"
-    		]
+    		"access": ["kong.service.request.enable_buffering() kong.log.set_serialize_value(\"request.body\", kong.request.get_body())"],
+    		"body_filter": [],
+    		"certificate": [],
+    		"functions": [],
+    		"header_filter": [],
+    		"log": ["kong.log.set_serialize_value(\"response.body\", kong.service.response.get_body())"],
+    		"rewrite": []
     	}
     }
 parameters: []

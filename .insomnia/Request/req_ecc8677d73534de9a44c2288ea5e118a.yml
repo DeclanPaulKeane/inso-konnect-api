@@ -1,20 +1,20 @@
-_id: req_a4e97e39eee54a408950c457f85baaa6
+_id: req_ecc8677d73534de9a44c2288ea5e118a
 type: Request
-parentId: fld_bcc081a8c13a44419f6326e026b91cf8
-modified: 1664205958719
-created: 1663087183867
+parentId: fld_a8c8ecac5a684bbe9b88eeb0ec19c753
+modified: 1664206712273
+created: 1664206709353
 url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
-  _.runtime_group_id }}/consumers/{% response 'body',
-  'req_aee932ce06744fc98ec6586c9b03bbaf', 'b64::JC5pZA==::46b', 'never', 60
-  %}/key-auth"
-name: Provision Consumer a Credential
+  _.runtime_group_id }}/consumers"
+name: Create a consumer
 description: ""
 method: POST
 body:
   mimeType: application/json
   text: |-
     {
-    	"key": "paulkey"
+    	"username": "paul",
+    	"tags": [],
+    	"custom_id": "paul"
     }
 parameters: []
 headers:
@@ -24,7 +24,7 @@ headers:
 authentication:
   token: "{{ _.personal_access_token }}"
   type: bearer
-metaSortKey: -1662506812405.25
+metaSortKey: -1662506812455.25
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

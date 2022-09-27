@@ -1,31 +1,27 @@
-_id: req_b0303d42c5ca4de998937e868eefc9b2
+_id: req_252271aaf64346aabb1d8b90236dfc4c
 type: Request
-parentId: fld_4bb3f91d4ab44b29aceef22b27412007
-modified: 1663300875663
-created: 1663093512130
+parentId: fld_cf68ec6aa89f437bade75536a5d98042
+modified: 1663891360797
+created: 1663620501929
 url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
   _.runtime_group_id }}/services/{{ _.service_id }}/plugins"
-name: Enable Key Auth Plugin on a Service
+name: Enable Pre Function Plugin on a Service
 description: ""
 method: POST
 body:
   mimeType: application/json
-  text: |-
+  text: >-
     {
     	"enabled": true,
-    	"name": "jwt",
+    	"name": "pre-function",
     	"config": {
-    		"cookie_names": [],
-    		"header_names": [
-    			"authorization"
-    		],
-    		"key_claim_name": "iss",
-    		"maximum_expiration": 0,
-    		"run_on_preflight": true,
-    		"secret_is_base64": false,
-    		"uri_param_names": [
-    			"jwt"
-    		]
+    		"access": ["kong.service.request.enable_buffering() kong.log.set_serialize_value(\"request.body\", kong.request.get_body())"],
+    		"body_filter": [],
+    		"certificate": [],
+    		"functions": [],
+    		"header_filter": [],
+    		"log": ["kong.log.set_serialize_value(\"response.body\", kong.service.response.get_body())"],
+    		"rewrite": []
     	}
     }
 parameters: []

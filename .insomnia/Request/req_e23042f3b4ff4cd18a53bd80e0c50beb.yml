@@ -1,11 +1,13 @@
-_id: req_bc5efa0a795447cfaa5153ebd194d139
+_id: req_e23042f3b4ff4cd18a53bd80e0c50beb
 type: Request
-parentId: fld_1cfadbb1af5a4ffe8c352a7ea42a7231
-modified: 1663620480825
-created: 1663087135121
+parentId: fld_a8c8ecac5a684bbe9b88eeb0ec19c753
+modified: 1664206709358
+created: 1664206709358
 url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
-  _.runtime_group_id }}/runtime-instances"
-name: List Runtime Instances
+  _.runtime_group_id }}/consumers/{% response 'body',
+  'req_aee932ce06744fc98ec6586c9b03bbaf', 'b64::JC5pZA==::46b', 'never', 60
+  %}/key-auth"
+name: List Credentials
 description: ""
 method: GET
 body: {}
@@ -14,7 +16,7 @@ headers: []
 authentication:
   token: "{{ _.personal_access_token }}"
   type: bearer
-metaSortKey: -1662515540375.625
+metaSortKey: -1662506812389.625
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

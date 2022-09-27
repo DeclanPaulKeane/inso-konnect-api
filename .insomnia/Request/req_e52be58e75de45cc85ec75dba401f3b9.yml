@@ -1,30 +1,35 @@
-_id: req_a4e97e39eee54a408950c457f85baaa6
+_id: req_e52be58e75de45cc85ec75dba401f3b9
 type: Request
-parentId: fld_bcc081a8c13a44419f6326e026b91cf8
-modified: 1664205958719
-created: 1663087183867
+parentId: fld_e4c5c5d2bf8249b4a3133250a39d0f39
+modified: 1664298627085
+created: 1664206379073
 url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
-  _.runtime_group_id }}/consumers/{% response 'body',
-  'req_aee932ce06744fc98ec6586c9b03bbaf', 'b64::JC5pZA==::46b', 'never', 60
-  %}/key-auth"
-name: Provision Consumer a Credential
+  _.runtime_group_id }}/routes/{{ _.route_id }}/plugins"
+name: Enable ACL Plugin on a Route
 description: ""
 method: POST
 body:
   mimeType: application/json
   text: |-
     {
-    	"key": "paulkey"
+    	"enabled": true,
+    	"name": "acl",
+    	"config": {
+    		"allow": [
+    			"group1"
+    		],
+    		"hide_groups_header": false
+    	}
     }
 parameters: []
 headers:
-  - id: pair_d42dc07b1cba4a938cc8ed215574f759
+  - id: pair_6cb39f823b894f41952d5aada4e38d1b
     name: Content-Type
     value: application/json
 authentication:
   token: "{{ _.personal_access_token }}"
   type: bearer
-metaSortKey: -1662506812405.25
+metaSortKey: -1662506812408.375
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true
