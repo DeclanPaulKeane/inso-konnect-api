@@ -1,20 +1,20 @@
-_id: req_a4e97e39eee54a408950c457f85baaa6
+_id: req_ef1d49ed40314346ba01012a8cb9b10b
 type: Request
 parentId: fld_bcc081a8c13a44419f6326e026b91cf8
-modified: 1664371517682
-created: 1663087183867
+modified: 1664371583806
+created: 1664371500585
 url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
   _.runtime_group_id }}/consumers/{% response 'body',
   'req_aee932ce06744fc98ec6586c9b03bbaf', 'b64::JC5pZA==::46b', 'never', 60
-  %}/key-auth"
-name: Provision Consumer a Credential
+  %}/key-auth/bb37ad62-66dd-46f5-8a22-ffd570813fa6"
+name: Update Consumer Credential
 description: ""
-method: POST
+method: PUT
 body:
   mimeType: application/json
   text: |-
     {
-    	"key": "foo"
+    	"key": "moo"
     }
 parameters: []
 headers:
@@ -24,7 +24,7 @@ headers:
 authentication:
   token: "{{ _.personal_access_token }}"
   type: bearer
-metaSortKey: -1662506812405.25
+metaSortKey: -1662506812401.3438
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

@@ -1,30 +1,22 @@
-_id: req_a4e97e39eee54a408950c457f85baaa6
+_id: req_12049673a3bc4eaeaa77f14ff7089a8d
 type: Request
 parentId: fld_bcc081a8c13a44419f6326e026b91cf8
-modified: 1664371517682
-created: 1663087183867
+modified: 1664371250315
+created: 1664371205588
 url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
   _.runtime_group_id }}/consumers/{% response 'body',
   'req_aee932ce06744fc98ec6586c9b03bbaf', 'b64::JC5pZA==::46b', 'never', 60
-  %}/key-auth"
-name: Provision Consumer a Credential
+  %}/key-auth/e929f77a-8fd3-4890-a411-0a222796568d"
+name: Delete Key Auth Credential
 description: ""
-method: POST
-body:
-  mimeType: application/json
-  text: |-
-    {
-    	"key": "foo"
-    }
+method: DELETE
+body: {}
 parameters: []
-headers:
-  - id: pair_d42dc07b1cba4a938cc8ed215574f759
-    name: Content-Type
-    value: application/json
+headers: []
 authentication:
   token: "{{ _.personal_access_token }}"
   type: bearer
-metaSortKey: -1662506812405.25
+metaSortKey: -1662506812381.8125
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true
