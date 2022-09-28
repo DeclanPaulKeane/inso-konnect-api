@@ -1,13 +1,11 @@
-_id: req_7c9a9a3592894424a52ff6bf1812bd86
+_id: req_8897918c791947bea06bfaaa5f90e369
 type: Request
-parentId: fld_bcc081a8c13a44419f6326e026b91cf8
-modified: 1664335290396
-created: 1664205879472
+parentId: fld_a8c8ecac5a684bbe9b88eeb0ec19c753
+modified: 1664335709664
+created: 1664335330561
 url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
-  _.runtime_group_id }}/consumers/{% response 'body',
-  'req_aee932ce06744fc98ec6586c9b03bbaf', 'b64::JC5pZA==::46b', 'never', 60
-  %}/key-auth"
-name: List Credentials
+  _.runtime_group_id }}/consumers/{{ _.consumer_id }}/acls"
+name: List consumer attached to ACL group
 description: ""
 method: GET
 body: {}
@@ -16,7 +14,7 @@ headers: []
 authentication:
   token: "{{ _.personal_access_token }}"
   type: bearer
-metaSortKey: -1662506812389.625
+metaSortKey: -1662506812397.4375
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true
