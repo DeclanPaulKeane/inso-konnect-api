@@ -1,16 +1,45 @@
 _id: req_01ec022955914bd0b36469fbdc4363c7
 type: Request
 parentId: fld_17d8ed439a13442ea104fdc4a356de4c
-modified: 1663720962591
+modified: 1666392655883
 created: 1663093811685
 url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
   _.runtime_group_id }}/v1/plugins"
 name: List Plugins
 description: ""
 method: GET
-body: {}
+body:
+  mimeType: application/json
+  text: >-
+    {
+    		"name": "pre-function",
+    		"enabled": true,
+    		"protocols": [
+    			"grpc",
+    			"grpcs",
+    			"http",
+    			"https"
+    		],
+    		"config": {
+    			"access": [
+    				"kong.service.request.enable_buffering()",
+    				"kong.log(ngx.ctx.balancer_data.scheme, '://', ngx.ctx.balancer_data.host, ':', ngx.ctx.balancer_data.port, ngx.var.upstream_uri)"
+    			],
+    			"body_filter": [],
+    			"certificate": [],
+    			"functions": [],
+    			"header_filter": [],
+    			"log": [
+    				"kong.log(string.gsub(kong.service.response.get_raw_body(), '\\n', ''))"
+    			],
+    			"rewrite": []
+    		}
+    }
 parameters: []
-headers: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_4e99db32a486487ca830fb66d134846a
 authentication:
   type: bearer
   token: "{{ _.personal_access_token }}"

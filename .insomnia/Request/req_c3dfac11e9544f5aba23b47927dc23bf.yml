@@ -1,7 +1,7 @@
 _id: req_c3dfac11e9544f5aba23b47927dc23bf
 type: Request
 parentId: fld_87a7da58cf30493c8d82b21b98df92ec
-modified: 1663721190450
+modified: 1666580015711
 created: 1663087244079
 url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
   _.runtime_group_id }}/services/{{ _.service_id }}/plugins"

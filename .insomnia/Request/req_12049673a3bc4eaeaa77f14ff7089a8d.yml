@@ -1,12 +1,11 @@
 _id: req_12049673a3bc4eaeaa77f14ff7089a8d
 type: Request
 parentId: fld_bcc081a8c13a44419f6326e026b91cf8
-modified: 1664371250315
+modified: 1666278400291
 created: 1664371205588
 url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
-  _.runtime_group_id }}/consumers/{% response 'body',
-  'req_aee932ce06744fc98ec6586c9b03bbaf', 'b64::JC5pZA==::46b', 'never', 60
-  %}/key-auth/e929f77a-8fd3-4890-a411-0a222796568d"
+  _.runtime_group_id }}/consumers/{{ _.consumer_id
+  }}/key-auth/c544c1fa-dc28-4858-86f3-bfc6546b989b"
 name: Delete Key Auth Credential
 description: ""
 method: DELETE

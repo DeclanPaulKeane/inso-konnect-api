@@ -1,11 +1,10 @@
 _id: req_fc40fd8678b84c6f83a64c9b819cf9a9
 type: Request
 parentId: fld_d00f9615ee71440b93d88fe92c33e9b0
-modified: 1663087297737
+modified: 1664917857812
 created: 1663087297737
 url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
-  _.runtime_group_id }}/routes/{% response 'body',
-  'req_01d4b246ea244cbd9852fe1644a0227a', 'b64::JC5pZA==::46b', 'never', 60 %}"
+  _.runtime_group_id }}/routes/"
 name: Delete a Route
 description: ""
 method: DELETE

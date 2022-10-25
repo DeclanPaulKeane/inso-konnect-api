@@ -1,7 +1,7 @@
 _id: req_416581bd6bf74b168690e9f753ef89ba
 type: Request
 parentId: fld_cf68ec6aa89f437bade75536a5d98042
-modified: 1663891330929
+modified: 1666395711610
 created: 1663620501924
 url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
   _.runtime_group_id }}/v1/plugins"
@@ -12,17 +12,28 @@ body:
   mimeType: application/json
   text: >-
     {
-    	"enabled": true,
-    	"name": "pre-function",
-    	"config": {
-    		"access": ["kong.service.request.enable_buffering() kong.log.set_serialize_value(\"request.body\", kong.request.get_body())"],
-    		"body_filter": [],
-    		"certificate": [],
-    		"functions": [],
-    		"header_filter": [],
-    		"log": ["kong.log.set_serialize_value(\"response.body\", kong.service.response.get_body())"],
-    		"rewrite": []
-    	}
+    		"name": "pre-function",
+    		"enabled": true,
+    		"protocols": [
+    			"grpc",
+    			"grpcs",
+    			"http",
+    			"https"
+    		],
+    		"config": {
+    			"access": [
+    				"kong.service.request.enable_buffering()",
+    				"kong.log(ngx.ctx.balancer_data.scheme, '://', ngx.ctx.balancer_data.host, ':', ngx.ctx.balancer_data.port, ngx.var.upstream_uri)"
+    			],
+    			"body_filter": [],
+    			"certificate": [],
+    			"functions": [],
+    			"header_filter": [],
+    			"log": [
+    				"kong.log(string.gsub(kong.service.response.get_raw_body(), '\\n', ''))"
+    			],
+    			"rewrite": []
+    		}
     }
 parameters: []
 headers:
