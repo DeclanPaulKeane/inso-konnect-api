@@ -1,30 +1,33 @@
-_id: req_e7312d2d1aec4bf495b7977d24fe17b9
+_id: req_7ff8278cc2fc412cb5479e839e1b199f
 type: Request
-parentId: fld_3fd4acd3c9cf455cabc1e21165709290
-modified: 1666745305962
-created: 1663087183869
+parentId: fld_876df518ce084ada9d853a5ebf084f29
+modified: 1666390702183
+created: 1666309443417
 url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
-  _.runtime_group_id }}/consumers"
-name: 2 - Create a consumer
+  _.runtime_group_id }}/v1/plugins"
+name: Enable File Log Plugin Globally
 description: ""
 method: POST
 body:
   mimeType: application/json
   text: |-
     {
-    	"username": "f-111",
-    	"tags": [],
-    	"custom_id": "f-111"
+    	"enabled": true,
+    	"name": "file-log",
+    	"config": {
+    		"path": "/tmp/filename.log",
+    		"reopen": false
+    	}
     }
 parameters: []
 headers:
-  - id: pair_d42dc07b1cba4a938cc8ed215574f759
+  - id: pair_6cb39f823b894f41952d5aada4e38d1b
     name: Content-Type
     value: application/json
 authentication:
   token: "{{ _.personal_access_token }}"
   type: bearer
-metaSortKey: -1662506812364.625
+metaSortKey: -1662506812499
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

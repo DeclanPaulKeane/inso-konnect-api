@@ -1,7 +1,7 @@
 _id: req_252271aaf64346aabb1d8b90236dfc4c
 type: Request
 parentId: fld_cf68ec6aa89f437bade75536a5d98042
-modified: 1666309218065
+modified: 1673632456449
 created: 1663620501929
 url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
   _.runtime_group_id }}/services/{{ _.service_id }}/plugins"
@@ -15,7 +15,7 @@ body:
     	"enabled": true,
     	"name": "pre-function",
     	"config": {
-    		"access": ["kong.service.request.enable_buffering() kong.log.set_serialize_value(\"request.body\", kong.request.get_body())"],
+    		"access": ["kong.service.request.enable_buffering()"],
     		"body_filter": [],
     		"certificate": [],
     		"functions": [],

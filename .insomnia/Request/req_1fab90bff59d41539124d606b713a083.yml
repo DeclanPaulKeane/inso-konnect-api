@@ -1,0 +1,57 @@
+_id: req_1fab90bff59d41539124d606b713a083
+type: Request
+parentId: fld_87a7da58cf30493c8d82b21b98df92ec
+modified: 1666731718754
+created: 1666580021891
+url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
+  _.runtime_group_id }}/services/{{ _.service_id }}/plugins"
+name: test2
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"enabled": true,
+    	"name": "rate-limiting-advanced",
+    	"config": {
+    		"dictionary_name": "kong_rate_limiting_counters_eth_unicorn",
+    		"identifier": "consumer",
+    		"limit": [
+    			60
+    		],
+    		"redis": {
+    			"database": 0,
+    			"host": "129.146.123.122",
+    			"keepalive_pool_size": 30,
+    			"password": "Jnt6XHvTvw8h",
+    			"port": 6379,
+    			"ssl": false,
+    			"ssl_verify": false,
+    			"timeout": 2000,
+    			"username": null
+    		},
+    		"strategy": "redis",
+    		"sync_rate": 5,
+    		"window_size": [
+    			60
+    		],
+    		"window_type": "fixed"
+    	}
+    }
+parameters: []
+headers:
+  - id: pair_6cb39f823b894f41952d5aada4e38d1b
+    name: Content-Type
+    value: application/json
+authentication:
+  token: "{{ _.personal_access_token }}"
+  type: bearer
+metaSortKey: -1662506812409.9375
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,10 +1,12 @@
 _id: req_01afba880ba64a9da724824b075830b5
 type: Request
 parentId: fld_d00f9615ee71440b93d88fe92c33e9b0
-modified: 1663721028236
+modified: 1668636689253
 created: 1663087297735
 url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups/{{
-  _.runtime_group_id }}/routes"
+  _.runtime_group_id
+  }}/services/35b55906-4f1b-42e3-99e2-e2465d6f0872/routes/5e66cee7-3e22-45fe-8b\
+  63-d8bb37471ad3"
 name: Create a Route
 description: ""
 method: POST

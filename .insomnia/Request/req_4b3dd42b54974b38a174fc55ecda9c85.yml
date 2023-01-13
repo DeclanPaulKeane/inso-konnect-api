@@ -1,19 +1,28 @@
-_id: req_a2d60334cfe240c5982230fc456ff619
+_id: req_4b3dd42b54974b38a174fc55ecda9c85
 type: Request
 parentId: fld_1cfadbb1af5a4ffe8c352a7ea42a7231
-modified: 1666745370670
-created: 1663087135120
+modified: 1666972370455
+created: 1666745381201
 url: "{{ _.konnect_global_cp }}/konnect-api/api/runtime_groups"
-name: List Runtime Groups
+name: Create a Runtime Group
 description: ""
-method: GET
-body: {}
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "name": "default",
+    	"description": "default"
+    }
 parameters: []
-headers: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_98dea74e9afc476b9bd8ac052e5bd6df
 authentication:
   token: "{{ _.personal_access_token }}"
   type: bearer
-metaSortKey: -1662515540378.75
+metaSortKey: -1662515540378.3594
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true
