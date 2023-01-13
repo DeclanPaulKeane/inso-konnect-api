@@ -1,19 +1,19 @@
-_id: req_45cba1c2cb83452c9e82addd8c6d2212
+_id: req_1fee2f4cd2554178813c7d076d9454b2
 type: Request
-parentId: fld_78fa6211363e455fa45e4889e9748964
-modified: 1673636179404
-created: 1663087135123
-url: "{{ _.konnect_global_cp }}/kauth/api/v1/users/me"
-name: List My User Info
+parentId: fld_33f670c405d64b9a9a78d1f64ca3c9ab
+modified: 1673638215386
+created: 1673636861105
+url: https://us.api.konghq.com/v2/portal-roles
+name: Available Roles
 description: ""
 method: GET
 body: {}
 parameters: []
 headers: []
 authentication:
-  token: "{{ _.personal_access_token }}"
   type: bearer
-metaSortKey: -1662515540377.1875
+  token: "{{ _.personal_access_token }}"
+metaSortKey: -1673605800730
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

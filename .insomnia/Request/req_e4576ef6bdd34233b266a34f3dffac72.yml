@@ -1,0 +1,24 @@
+_id: req_e4576ef6bdd34233b266a34f3dffac72
+type: Request
+parentId: fld_33f670c405d64b9a9a78d1f64ca3c9ab
+modified: 1673638221965
+created: 1673637858323
+url: https://us.api.konghq.com/v2/portals/{{ _.portal_id }}/teams/teams/{{
+  _.portal_team_id }}/assigned-roles/{{ _.role_id }}
+name: Delete a Role to a Team
+description: ""
+method: POST
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  token: "{{ _.personal_access_token }}"
+metaSortKey: -1673599098958.75
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

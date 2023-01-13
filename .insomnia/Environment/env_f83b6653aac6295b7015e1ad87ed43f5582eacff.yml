@@ -1,7 +1,7 @@
 _id: env_f83b6653aac6295b7015e1ad87ed43f5582eacff
 type: Environment
 parentId: wrk_d79ac0a1ef574852b51786e6686ce6ad
-modified: 1666732775564
+modified: 1673637915663
 created: 1663086952389
 name: Base Environment
 data:
@@ -13,6 +13,9 @@ data:
   route_id: ""
   consumer_id: ""
   plugin_id: ""
+  portal_id: ""
+  portal_team_id: ""
+  role_id: ""
 dataPropertyOrder:
   "&":
     - konnect_global_cp
@@ -23,6 +26,9 @@ dataPropertyOrder:
     - route_id
     - consumer_id
     - plugin_id
+    - portal_id
+    - portal_team_id
+    - role_id
 color: null
 isPrivate: false
 metaSortKey: 1663086952389

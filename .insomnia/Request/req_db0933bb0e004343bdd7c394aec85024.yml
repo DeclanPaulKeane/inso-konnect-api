@@ -1,19 +1,21 @@
-_id: req_454e4eb525c142369331a13d3e7cab0e
+_id: req_db0933bb0e004343bdd7c394aec85024
 type: Request
 parentId: fld_33f670c405d64b9a9a78d1f64ca3c9ab
-modified: 1673637940438
-created: 1673632607815
+modified: 1673638214907
+created: 1673636876260
 url: https://us.api.konghq.com/v2/portals/{{ _.portal_id }}/teams
-name: Create a Portal Team
+name: Assigning a Role to a Team
 description: ""
 method: POST
 body:
   mimeType: application/json
   text: |-
     {
-        "name": "IDM - Developers Team",
-        "description": "The Identity Management (IDM) team."
-      }
+      "role_name": "API Viewer",
+      "entity_id": "<service-package-id>",
+      "entity_type_name": "Services",
+      "entity_region": "us"
+    }
 parameters: []
 headers:
   - name: Content-Type
@@ -22,7 +24,7 @@ headers:
 authentication:
   type: bearer
   token: "{{ _.personal_access_token }}"
-metaSortKey: -1673632607815
+metaSortKey: -1673601332882.5
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

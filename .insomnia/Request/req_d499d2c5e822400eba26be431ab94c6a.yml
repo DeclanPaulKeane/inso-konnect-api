@@ -1,28 +1,27 @@
-_id: req_454e4eb525c142369331a13d3e7cab0e
+_id: req_d499d2c5e822400eba26be431ab94c6a
 type: Request
 parentId: fld_33f670c405d64b9a9a78d1f64ca3c9ab
-modified: 1673637940438
-created: 1673632607815
-url: https://us.api.konghq.com/v2/portals/{{ _.portal_id }}/teams
-name: Create a Portal Team
+modified: 1673638220617
+created: 1673636186441
+url: https://us.api.konghq.com/v2/portals/{{ _.portal_id }}/teams//developers
+name: Create a Developer
 description: ""
 method: POST
 body:
   mimeType: application/json
   text: |-
     {
-        "name": "IDM - Developers Team",
-        "description": "The Identity Management (IDM) team."
-      }
+      "id": "example@gmail.com"
+    }
 parameters: []
 headers:
   - name: Content-Type
     value: application/json
-    id: pair_317315e1aac04488b37c1a37ec9d93f7
+    id: pair_d00e44bfcddc4fe6bbda9310120f8228
 authentication:
   type: bearer
   token: "{{ _.personal_access_token }}"
-metaSortKey: -1673632607815
+metaSortKey: -1673596865035
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true
